@@ -16,5 +16,4 @@ const markupGallery = galleryItems
 
 containerLightBox.innerHTML = markupGallery;
 
-let gallery;
-gallery = new SimpleLightbox(".gallery a", { captionDelay: 250 });
+new SimpleLightbox(".gallery a", { captionDelay: 250 });
