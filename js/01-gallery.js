@@ -5,7 +5,7 @@ const container = document.querySelector(".gallery");
 
 const markup = galleryItems
   .map(
-    ({ preview, original, description }) => ` <li class="gallery__item">
+    ({ preview, original, description }) => `<li class="gallery__item">
       <a class="gallery__link" href="large-image.jpg">
         <img class="gallery__image " src="${preview}" data-source="${original}" alt="${description}" />
       </a>
@@ -40,14 +40,12 @@ function onOpenLargeImage(evt) {
   );
 
   instance.show();
-  console.log("onOpenLargeImage  data", instance);
 }
 
 function handlerEscapeModal(evt) {
   if (evt.code === "Escape") {
     instance.close();
   }
-  console.log(evt.code);
 }
 window.addEventListener("keydown", handlerEscapeModal);
 window.removeEventListener("keydown", handlerEscapeModal);
