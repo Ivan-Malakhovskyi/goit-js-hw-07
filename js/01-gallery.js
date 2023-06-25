@@ -7,7 +7,7 @@ const markup = galleryItems
   .map(
     ({ preview, original, description }) => `<li class="gallery__item">
       <a class="gallery__link" href="large-image.jpg">
-        <img class="gallery__image " src="${preview}" data-source="${original}" alt="${description}" />
+        <img class="gallery__image" src="${preview}" data-source="${original}" alt="${description}" />
       </a>
     </li>`
   )
@@ -22,7 +22,7 @@ let instance;
 function onOpenLargeImage(evt) {
   evt.preventDefault();
 
-  if (evt.target.classList.contains("gallery__item")) {
+  if (!evt.target.classList.contains("gallery__image")) {
     return;
   }
 
